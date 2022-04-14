@@ -1,13 +1,14 @@
-function BeamListScPlot(centerList,w,h,center,pixelSize,beamSize,beamIntensity)
+function BeamListScPlot(ax, centerList,w,h,pixelSize,beamSize,beamIntensity,center)
 
     arguments
+        ax
         centerList (:,2) double
         w = 2048;
         h = 2048;
-        center = [w/2, h/2];
         pixelSize = 15e-6;
         beamSize = 300e-6;
         beamIntensity = 100;
+        center = [w/2, h/2];
     end
 
     img = zeros(h,w);
@@ -25,8 +26,8 @@ function BeamListScPlot(centerList,w,h,center,pixelSize,beamSize,beamIntensity)
 
         end
     end
-
-    imagesc(img);
-    colormap jet;
-    axis equal;
+    
+    imagesc(ax, img);
+    colormap(ax, 'jet');
+    axis(ax, 'equal');
 end
