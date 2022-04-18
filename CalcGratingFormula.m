@@ -1,5 +1,5 @@
 function [m, Lambda, d, Theta] = CalcGratingFormula(m, Lambda, d, Theta)
-    % d*sin(Theta) = m * Lambda
+    % d*sin(Theta) = m*Lambda
     
     if m == 0
         m = d * sin(Theta) / Lambda;
