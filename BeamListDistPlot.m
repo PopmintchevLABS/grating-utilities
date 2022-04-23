@@ -8,7 +8,7 @@ function BeamListDistPlot(ax,centerList, sampleCord, sampleDim, w,h, pixelSize,b
         h = 2048;
         pixelSize = 15e-6;
         beamSize = 300e-6;
-        beamIntensity (:,1) double = [100];
+        beamIntensity (:,1) double = 100;
         center = [w/2, h/2];
     end
 
